@@ -14,11 +14,11 @@ import { join } from 'path';
 @Module({
   imports: [PatientModule ,AdminModule, DoctorModule, TypeOrmModule.forRoot(
     { type: 'postgres',
-     host: 'localhost',
-     port: 5432,
+     host: 'containers-us-west-104.railway.app',
+     port: 5472,
      username: 'postgres',
-     password: '1995',
-     database: 'healthcare',
+     password: 'Psb2rabQjMzwpybHSUPK',
+     database: 'railway',
      autoLoadEntities: true,
      synchronize: true,
    }
