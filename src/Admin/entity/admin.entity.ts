@@ -1,7 +1,7 @@
 import { Column, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Entity } from "typeorm/decorator/entity/Entity";
 import { HospitalEntity } from "./hospital.entity";
-import { DoctorEntity } from "src/doctor/doctor.entity";
+
 // import { Gender } from "../dto/admin.dto";
 
 @Entity("admin")
@@ -35,8 +35,5 @@ export class AdminEntity{
 
     @OneToMany(() => HospitalEntity, (hospital) => hospital.admin)
     hospitals: HospitalEntity[];
-
-    @OneToMany(() => DoctorEntity, (doctor) => doctor.admin)
-    doctors: DoctorEntity[];
 
 }

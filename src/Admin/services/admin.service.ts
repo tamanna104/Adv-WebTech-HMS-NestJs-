@@ -140,15 +140,6 @@ export class AdminService {
          });
     }
 
-    getDoctorsByAdminId(id):any {
-        return this.adminRepo.find({ 
-                where: {id:id},
-            relations: {
-                doctors: true,
-            },
-         });
-    }
-
     async sendEmail(mydata){
         return   await this.mailerService.sendMail({
                to: mydata.email,

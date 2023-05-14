@@ -1,4 +1,3 @@
-import { DoctorEntity } from "src/doctor/doctor.entity";
 import { Column, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Entity } from "typeorm/decorator/entity/Entity";
 import { AdminEntity } from "./admin.entity";

@@ -13,9 +13,6 @@ import { BloodBankEntity } from "../entity/bloodBank.entity";
 import { BloodBankController } from "../controllers/bloodBank.controller";
 import { BloodBankService } from "../services/bloodBank.service";
 import { MailerModule } from "@nestjs-modules/mailer";
-import { StaffSalEntity } from "../entity/staffSal.entity";
-import { StaffSalController } from "../controllers/satffSal.controller";
-import { StaffSalService } from "../services/StaffSal.service";
 @Module(
     {
         imports: [
@@ -31,9 +28,9 @@ import { StaffSalService } from "../services/StaffSal.service";
                            },
                           }
               }),
-            TypeOrmModule.forFeature([AdminEntity, HospitalEntity, DocSalEntity, BloodBankEntity, StaffSalEntity])],
-        controllers: [AdminController, HospitalController, DocSalController, BloodBankController, StaffSalController],
-        providers: [AdminService, HospitalService, DocSalService, BloodBankService, StaffSalService],
+            TypeOrmModule.forFeature([AdminEntity, HospitalEntity, DocSalEntity, BloodBankEntity])],
+        controllers: [AdminController, HospitalController, DocSalController, BloodBankController],
+        providers: [AdminService, HospitalService, DocSalService, BloodBankService],
     }
 )
 export class AdminModule{

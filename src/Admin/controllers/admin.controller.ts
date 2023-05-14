@@ -127,11 +127,6 @@ export class AdminController {
     return this.adminService.getHospitalsByAdminId(id);
   }
 
-  @Get('/findDoctorsByAdmin/:id')
-  getDoctorsByAdminId(@Param('id', ParseIntPipe) id: number): any {
-    return this.adminService.getDoctorsByAdminId(id);
-  }
-
   @Post("signup")
   @UseInterceptors(FileInterceptor('file',
   {storage:diskStorage({
