@@ -21,7 +21,7 @@ export class CreateAdminDto {
     password: string;
 
     @IsNotEmpty({message: "your gender*"})
-    @Matches(/^(?:male|female|other)$/ig, {
+    @Matches(/^(?:Male|Female|Other)$/ig, {
         message: " Invalid. Male / Female / other?"})
     gender:string;
 
